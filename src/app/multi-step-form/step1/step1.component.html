@@ -1,0 +1,15 @@
+
+<div class="row" id="start-registration" [formGroup]="regForm">
+    <div class="form-group col-md-12" formGroupName="startRegistration">
+      <h5>Waar gaat uw zaak over?</h5>
+      <label>Mijn zaak gaat over*</label>
+      <!--    <input type="text" class="form-control" formControlName="firstname">-->
+      <select  class="form-control" formControlName="typeOfCase" required>
+        <option value="0" selected="" disabled="">Vordering zaak</option>
+        <option value="particuliers">Particulier</option>
+        <option value="zakelijk">Zakelijk</option>
+      </select>
+    </div>
+</div>
+  <br />
+  <button style="float: right;" type="button" class="btn btn-primary" matStepperNext>Volgende</button>

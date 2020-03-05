@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-step1',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class Step1Component implements OnInit {
 
   constructor() { }
+
+  @Input() regForm: FormGroup;
 
   ngOnInit(): void {
   }

@@ -1,0 +1,152 @@
+
+<div class="container">
+    <h2 style="text-align: center;">Total Data</h2>
+    <ul class="list-group list-group-flush">
+        
+      <!-- <h4>Start aanmelding</h4> -->
+      <li class="list-group-item">
+          <div class="row">
+            <div class="col-8"><h6>Mijn zaak gaat over*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.startRegistration.typeOfCase}}</h6></div>
+          </div>
+      </li>
+      <!-- <h4>Uw zaak & documenten</h4> -->
+      <li class="list-group-item">
+          <div class="row">
+            <div class="col-8"><h6>Bent u naar de rechter geweest</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.withToLaw}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Is er een vonnis?</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.vonnis}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Welk bedrag wordt er in totaal van u gevorderd?*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.totalClaimPrice}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Wat is het dossiernummer?*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.dossiernummer}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Welke (mogelijke) oplossing wilt u ?*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.oplossingen}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Waar denkt u dat er fouten in uw dossier zijn gemaakt?</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.gemaakteFouten}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Naam schuldeiser</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seCompany}}</h6></div>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Contactpersoon (indien van toepassing)</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seName}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Adres</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seAddress}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Huisnummer</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seHousenr}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Postcode</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seZipcode}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Plaats</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seCity}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>E-mail adres*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.seEmail}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Telefoonnummer</h6></div>
+            <div class="col-4"><h6>{{regForm.value.caseDetails.sePhone}}</h6></div>
+        </div>
+      </li>
+      
+      <!-- <h4>Uw gegevens</h4> -->
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Naam</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.firstname}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Achternaam</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.lastname}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Adres</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.address}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Huisnummer</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.housenr}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Postcode</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.zipcode}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Plaats</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.city}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>E-mail adres*</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.email}}</h6></div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-8"><h6>Telefoonnummer</h6></div>
+            <div class="col-4"><h6>{{regForm.value.contactDetails.phone}}</h6></div>
+        </div>
+      </li>
+    </ul>
+    <br>
+    <button style="float: right;" type="button" class="btn btn-danger">Send</button>
+  </div>

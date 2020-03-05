@@ -1,0 +1,101 @@
+
+<div id="case-details" [formGroup]="regForm">
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Bent u naar de rechter geweest</label>
+      <select name="law" class="form-control" formControlName="withToLaw">
+        <option value="0" selected="" disabled="">---</option>
+        <option value="Ja">Ja</option>
+        <option value="Nee">Nee</option>
+      </select>
+    </div>
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Is er een vonnis?</label>
+      <select name="law" class="form-control" formControlName="vonnis">
+        <option value="0" selected="" disabled="">---</option>
+        <option value="Ja">Ja</option>
+        <option value="Nee">Nee</option>
+      </select>
+    </div>
+  
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Welk bedrag wordt er in totaal van u gevorderd?*</label>
+      <input type="text" class="form-control" formControlName="totalClaimPrice">
+    </div>
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Wat is het dossiernummer?*</label>
+      <input type="text" class="form-control" formControlName="dossiernummer">
+    </div>
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Welke (mogelijke) oplossing wilt u ?*</label>
+      <select name="oplossingen" class="form-control" formControlName="oplossingen">
+        <option value="0" selected="" disabled="">---</option>
+        <option value="oplossing-1">Vordering -geheel of gedeeltelijk- betwisten (U dient bewijs aan te leveren waaruit dat blijkt. </option>
+        <option value="oplossing-2">Betalingsregeling treffen (inkomsten en uitgavenformulier)</option>
+        <option value="oplossing-3">Finale kwijting (aannemelijk maken waarom schuldeiser het maximale ontvangt en cliënt niet meer kan betalen).</option>
+        <option value="oplossing-4">Adempauze ( U dient bewijs te overleggen waaruit blijkt dat u  geen inkomen heeft, maar op korte termijn wel weer ontvangt). </option>
+        <option value="oplossing-4">Rente stop</option>
+      </select>
+    </div>
+  
+    <div class="form-group col-md-12" formGroupName="caseDetails">
+      <label>Waar denkt u dat er fouten in uw dossier zijn gemaakt?</label>
+      <textarea name="" id=""  rows="10" class="form-control" formControlName="gemaakteFouten"></textarea>
+    </div>
+  
+    
+    <div id="schuldeiser-details">
+      <div class="form-group col-md-12">
+        <h5>Wie is de schuldeiser?</h5>
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Naam schuldeiser </label>
+        <input type="text" class="form-control" formControlName="seCompany">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Contactpersoon (indien van toepassing)</label>
+        <input type="text" class="form-control" formControlName="seName">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Adres</label>
+        <input type="text" class="form-control" formControlName="seAddress">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Huisnummer</label>
+        <input type="text" class="form-control" formControlName="seHousenr">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Postcode</label>
+        <input type="text" class="form-control" formControlName="seZipcode">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Plaats</label>
+        <input type="text" class="form-control" formControlName="seCity">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>E-mail adres*</label>
+        <input type="text" class="form-control" formControlName="seEmail">
+      </div>
+      <div class="form-group col-md-12" formGroupName="caseDetails">
+        <label>Telefoonnummer</label>
+        <input type="text" class="form-control" formControlName="sePhone">
+      </div>
+      </div>
+  
+  
+  
+  <!--  <div class="form-group col-md-4" formGroupName="caseDetails">-->
+  <!--    <label>Email*</label>-->
+  <!--    <input type="text" class="form-control" formControlName="email">-->
+  <!--  </div>-->
+  <!--  <div class="form-group col-md-4" formGroupName="caseDetails">-->
+  <!--    <label>Phone</label>-->
+  <!--    <input type="text" class="form-control" formControlName="phone">-->
+  <!--  </div>-->
+  </div>
+  <br/>
+  <div style="float: right;">
+    <button type="button" class="btn btn-success" matStepperPrevious>Vorige</button>
+    &nbsp;
+    <button type="button" class="btn btn-primary" matStepperNext >Volgende</button>
+  </div>
+  

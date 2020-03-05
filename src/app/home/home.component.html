@@ -1,0 +1,45 @@
+<div class="container">
+
+    <section id="basic-form-layouts">
+  
+      <div class="row text-left">
+        <div class="">
+          <div class="card">
+            <div class="card-header pb-2">
+              <h3>{{ title }}</h3>
+              <p class="mb-0">{{ subTitle }}</p>
+            </div>
+            <div class="card-content">
+              <div class="px-3">
+                <form class="form" id="regForm" [formGroup]="registrationForm" (ngSubmit)="submitForm">
+  
+                  <mat-horizontal-stepper #stepper linear>
+                    <mat-step formGroupName="startRegistration" [stepControl]="registrationForm.get('startRegistration')">
+                      <ng-template matStepLabel>Start aanmelding</ng-template>
+                      <app-step1 [regForm]="registrationForm"></app-step1>
+                      
+                    </mat-step>
+                    <mat-step formGroupName="caseDetails" [stepControl]="registrationForm.get('caseDetails')">
+                        <ng-template matStepLabel>Uw zaak & documenten</ng-template>
+                        <app-step2 [regForm]="registrationForm"></app-step2>
+                    </mat-step>
+
+                    <mat-step formGroupName="contactDetails" [stepControl]="registrationForm.get('contactDetails')">
+                        <ng-template matStepLabel>Uw gegevens</ng-template>
+                        <app-step3 [regForm]="registrationForm"></app-step3>
+                    </mat-step>
+                    
+                    <mat-step formGroupName="caseDetails" [stepControl]="registrationForm.get('casetDetails')">
+                      <ng-template matStepLabel>Verzenden</ng-template>
+                      <app-step4 [regForm]="registrationForm"></app-step4>
+                    </mat-step>
+                  </mat-horizontal-stepper>
+  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

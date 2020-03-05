@@ -1,0 +1,44 @@
+<div id="contact-details" [formGroup]="regForm">
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Naam</label>
+      <input type="text" class="form-control" formControlName="firstname">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Achternaam</label>
+      <input type="text" class="form-control" formControlName="lastname">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Adres</label>
+      <input type="text" class="form-control" formControlName="address">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Huisnummer</label>
+      <input type="text" class="form-control" formControlName="housenr">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Postcode</label>
+      <input type="text" class="form-control" formControlName="zipcode">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Plaats</label>
+      <input type="text" class="form-control" formControlName="city">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>E-mail adres*</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group col-md-4" formGroupName="contactDetails">
+      <label>Telefoonnummer</label>
+      <input type="text" class="form-control" formControlName="phone">
+    </div>
+    
+
+</div>
+  <br/>
+  <div style="float: right;">
+    <button type="button" class="btn btn-success" matStepperPrevious>Vorige</button>
+    &nbsp;
+    <button type="button" class="btn btn-primary" matStepperNext >Volgende</button>
+  </div>
+  
+  
