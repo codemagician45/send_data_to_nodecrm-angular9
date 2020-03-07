@@ -19,15 +19,7 @@ export class HomeComponent implements OnInit {
   redirect_uri = `http://localhost:4200/`;
   constructor(
     private router: Router,
-    // private route: ActivatedRoute,
-    private _formBuilder: FormBuilder
-  ) {
-    // this.router.events.subscribe(ev => {
-    //   if (ev instanceof NavigationEnd) {
-    //     console.log('router: ');
-    //   }
-    // });
-  }
+    private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     // this.route.params.subscribe(res => {
@@ -82,20 +74,20 @@ export class HomeComponent implements OnInit {
       }),
 
     });
-    // console.log(this.router.url);
-    if (this.router.url.includes('code')) {
-      const code = this.router.url.slice(7);
-      localStorage.setItem('code', JSON.stringify(code));
-    }
+
+    // if (this.router.url.includes('code')) {
+    //   const code = this.router.url.slice(7);
+    //   localStorage.setItem('code', JSON.stringify(code));
+    // }
   }
 
   submitForm() {
     console.log('submit' + this.registrationForm)
   }
 
-  getCode() {
-    window.location.href = `https://app.teamleader.eu/oauth2/authorize?client_id=${this.client_id}&response_type=${this.response_type}&redirect_uri=${this.redirect_uri}`;
+  // getCode() {
+  //   window.location.href = `https://app.teamleader.eu/oauth2/authorize?client_id=${this.client_id}&response_type=${this.response_type}&redirect_uri=${this.redirect_uri}`;
 
-  }
+  // }
 }
 

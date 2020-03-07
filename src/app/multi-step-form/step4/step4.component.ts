@@ -123,10 +123,6 @@ export class Step4Component implements OnInit {
 
   OnSend() {
 
-    this.dealData.append("api_group", this.api_group);
-    this.dealData.append("api_secret", this.api_secret);
-
-
     this.contactData.append("api_group", this.api_group);
     this.contactData.append("api_secret", this.api_secret);
     this.contactData.append("forename", this.regForm.value.contactDetails.firstname);
@@ -138,8 +134,35 @@ export class Step4Component implements OnInit {
     this.contactData.append("street", this.regForm.value.contactDetails.address);
     this.contactData.append("number", this.regForm.value.contactDetails.housenr);
 
-    this.apiService.post("/api/addContact.php", this.contactData).subscribe(res => {
-      console.log(res);
-    });
+    this.apiService.post("/api/addContact.php", this.contactData).subscribe(contactId => {
+      alert("Contact Added Successfully: ID:" + JSON.stringify(contactId));
+      this.dealData.append("api_group", this.api_group);
+      this.dealData.append("api_secret", this.api_secret);
+      this.dealData.append("title", "Incassogeschil");
+      this.dealData.append("source", "antiincasso");
+      this.dealData.append("contact_or_company", "contact");
+      this.dealData.append("contact_or_company_id", JSON.stringify(contactId));
+      this.dealData.append("custom_field_336945", this.regForm.value.startRegistration.typeOfCase);
+      this.dealData.append("custom_field_336946", this.regForm.value.caseDetails.withToLaw);
+      this.dealData.append("custom_field_336947", this.regForm.value.caseDetails.vonnis);
+      this.dealData.append("custom_field_336948", this.regForm.value.caseDetails.totalClaimPrice);
+      this.dealData.append("custom_field_336949", this.regForm.value.caseDetails.dossiernummer);
+      this.dealData.append("custom_field_336950", this.regForm.value.caseDetails.oplossingen);
+      this.dealData.append("custom_field_336951", this.regForm.value.caseDetails.gemaakteFouten);
+      this.dealData.append("custom_field_336952", this.regForm.value.caseDetails.seCompany);
+      this.dealData.append("custom_field_336955", this.regForm.value.caseDetails.seName);
+      this.dealData.append("custom_field_336956", this.regForm.value.caseDetails.seAddress);
+      this.dealData.append("custom_field_336957", this.regForm.value.caseDetails.seHousenr);
+      this.dealData.append("custom_field_336958", this.regForm.value.caseDetails.seZipcode);
+      this.dealData.append("custom_field_336959", this.regForm.value.caseDetails.seCity);
+      this.dealData.append("custom_field_336960", this.regForm.value.caseDetails.seEmail);
+      this.dealData.append("custom_field_336961", this.regForm.value.caseDetails.sePhone);
+
+      this.apiService.post("/api/addDeal.php", this.dealData).subscribe(dealId => {
+        alert("Deal Added Successfully: ID:" + JSON.stringify(dealId));
+      });
+
+
+    }), (error => console.log(error));
   }
 }
