@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -13,11 +13,6 @@ export class ApiService {
     return this.httpClient.get(url);
   }
   post(url, body) {
-
-    let header = new HttpHeaders()
-      .set('Content-Type', 'application/json');
-
-    return this.httpClient.post(url, body, { headers: header });
-    // return this.httpClient.post(url, body);
+    return this.httpClient.post(url, body);
   }
 }
