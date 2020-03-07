@@ -1,0 +1,12 @@
+{
+    "/api": {
+        "target": "https://app.teamleader.eu",
+        "secure": false
+    },
+    "/oauth2/*": {
+        "target": "https://app.teamleader.eu",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
